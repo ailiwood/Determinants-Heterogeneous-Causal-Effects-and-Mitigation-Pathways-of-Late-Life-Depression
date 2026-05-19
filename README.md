@@ -58,27 +58,38 @@
 
 ## 5. 仓库结构
 
-├── data/                          # 数据目录（不入库，需自行准备）
+```text
+.
+├── data/                                  # 数据目录（不入库，需自行准备）
 │   └── preprocess_outputs/
-│       └── data1_modeling_ready.xlsx
+│       └── data1_modeling_ready.xlsx      # 建模用清洗数据
 │
-├── scripts/                       # 主分析脚本，按阶段命名
-│   ├── s1_.py                    # 数据预处理与变量构建
-│   ├── s2_.py                    # 描述统计与时空分布
-│   ├── s3_.py                    # 面板固定效应（FE）
-│   ├── s4_.py                    # 可解释机器学习筛选（LASSO/RF/XGB + SHAP）
-│   ├── s5_.py                    # 双重机器学习（DML）
-│   ├── s6_01_crf_all.py          # 因果随机森林CRF
-│   ├── s6_02_cumulative_risk_analysis.py     # 复合风险分析 A
-│   ├── s6_03_fe_interaction_models.py        # 复合风险分析 B
-│   ├── s6_04_dml_subgroup_synergy.py         # 复合风险分析 C
-│   ├── s7_.py                    # 内生性讨论
-│   ├── s8_.py                    # 稳健性检验
-│   ├── s9_.py                    # 因果随机森林（CRF）与异质性
-│   └── composite_risk.py      # 复合风险变量统一构建工具
+├── scripts/                               # 主分析脚本，按阶段命名
+│   ├── s1_*.py                            # 数据预处理与变量构建
+│   ├── s2_*.py                            # 描述统计与时空分布
+│   ├── s3_*.py                            # 面板固定效应模型（FE）
+│   ├── s4_*.py                            # 可解释机器学习筛选（LASSO/RF/XGB + SHAP）
+│   ├── s5_*.py                            # 双重机器学习（DML）
+│   ├── s6_01_crf_all.py                   # 因果随机森林（CRF）主分析
+│   ├── s6_02_cumulative_risk_analysis.py  # 复合风险分析A：累积风险阶梯
+│   ├── s6_03_fe_interaction_models.py     # 复合风险分析B：FE交互模型
+│   ├── s6_04_dml_subgroup_synergy.py      # 复合风险分析C：DML亚组协同估计
+│   ├── s7_*.py                            # 内生性讨论
+│   ├── s8_*.py                            # 稳健性检验
+│   ├── s9_*.py                            # 分组异质性与证据整合
+│   └── composite_risk.py                  # 复合风险变量统一构建工具
 │
-
+├── 10_tables_for_paper/                   # 论文表格输出
+├── 11_figures_for_paper/                  # 论文图像输出
+├── round2_outputs/                        # 盲审后第二轮修改输出
+│   ├── 02_interaction_cumulative_risk/     # 复合风险/交互分析结果
+│   ├── 04_tables_for_paper/               # 第二轮论文表格
+│   └── 05_figures_for_paper/              # 第二轮论文图像
+│
 └── README.md
+```
+
+
 
 ## 6. 复现指南
 
