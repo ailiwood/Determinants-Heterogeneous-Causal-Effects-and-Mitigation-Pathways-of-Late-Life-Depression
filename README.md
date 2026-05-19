@@ -1,4 +1,3 @@
-# Determinants, Heterogeneous Causal Effects, and Mitigation Pathways of Late-Life Depression in China
 
 ## 中国老年人抑郁倾向的复合风险、条件因果效应与分层治理 —— 基于 CHARLS 数据的因果机器学习研究
 
