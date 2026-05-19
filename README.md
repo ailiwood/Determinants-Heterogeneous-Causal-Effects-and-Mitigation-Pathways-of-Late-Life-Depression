@@ -58,7 +58,6 @@
 
 ## 5. 仓库结构
 
-.
 ├── data/                          # 数据目录（不入库，需自行准备）
 │   └── preprocess_outputs/
 │       └── data1_modeling_ready.xlsx
